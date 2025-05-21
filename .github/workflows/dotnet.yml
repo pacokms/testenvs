@@ -4,10 +4,16 @@
 name: .NET
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      target_environment:
+        description: 'Select target'
+        type: choise
+        required: true
+        options:
+          - client1-prod
+          - client2-prod
+          - client1-staging
 
 jobs:
   build:
