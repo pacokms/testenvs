@@ -1,4 +1,4 @@
-# This workflow will build a .NET project
+loy# This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
 name: test
@@ -16,7 +16,7 @@ on:
           - client1-staging
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     environment: ${{ github.event.inputs.target_environment }}
     steps:
